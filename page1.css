@@ -1,0 +1,159 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+    body{
+background: -webkit-linear-gradient(left, green, red , yellow);
+  padding-top: 80px;
+}
+
+
+header{
+  width:100%;
+  height:60px;
+  display:flex;
+background: rgb(86, 168, 114);
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  position:fixed;
+  top:0;
+  left:0;
+
+}
+
+.sans{
+  font-size:22px;
+  font-weight:bold;
+  color:green;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+ 
+}
+
+nav ul li a{
+  cursor:pointer;
+  text-decoration: none;
+  list-style: none;
+  color: aliceblue;
+}
+
+nav ul li a:hover{
+  color:red;
+}
+
+.connecter{
+  display:flex;
+  gap:15px;
+}
+
+.connecter a{
+  text-decoration:none;
+  color:#fff;
+  padding:6px 14px;
+  border:1px solid #ff3c3c;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+.connecter a:hover{
+  background:yellow;
+}.menu-icon {
+  width:30px;
+  height:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.menu-icon div {
+  height:4px;
+  background:white;
+  border-radius:3px;
+}
+
+
+.menu-regions {
+  position:absolute;
+  right:25px;
+  top:60px;
+  background:#014a9c;
+  border-radius:5px;
+  list-style:none;
+  padding:0;
+  display:none;
+  min-width:200px;
+}
+
+.menu-regions li a {
+  display:block;
+  padding:12px;
+  color:white;
+  text-decoration:none;
+}
+
+.menu-regions li a:hover {
+  background:#0167d4;
+}
+
+
+#contenu-region {
+  padding:30px;
+}
+
+#contenu-region img {
+  width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+    margin-top:10px;
+}
+.images{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 80px;
+  justify-items: center;
+}
+
+
+.t{
+  width: 350px;
+  height: 350px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.t:hover {
+  transform: scale(1.05);
+}
+
+
+.t img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+
+.t p {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+h2{
+  text-align: center;
+}
+
+
+

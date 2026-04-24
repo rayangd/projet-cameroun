@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cameroun - Afrique en miniature</title>
+<link rel="stylesheet" href="page2.css">
+<link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>🇨🇲 Cameroun</h1>
+    <p>L’Afrique en miniature</p>
+    
+    <div class="sans">paix-travail-patrie</div>
+  
+
+    <nav>
+         <div class="logo-titre">
+        <img src="OIP.webp" alt="Drapeau du Cameroun" class="drapeau">
+        <h1 class="titre">Bienvenue au Cameroun</h1> 
+       
+    </div>
+
+           <ul>
+            <li><a href="page1.html">paysage</a></li>
+            <li><a href="page2.html">actu politique</a></li>
+            <li><a href="pagess3.html">histoire</a></li>
+        </ul>
+    </nav>
+
+    
+
+   <img src="OIP.webp" id="menuIcon" class="menu-icon" alt="Menu">
+
+    <ul class="menu-regions" id="menuRegions">
+        <li><a href="#" data-region="adamaoua">Adamaoua</a></li>
+        <li><a href="#" data-region="centre">Centre</a></li>
+        <li><a href="#" data-region="est">Est</a></li>
+        <li><a href="#" data-region="extremenord">Extrême-Nord</a></li>
+        <li><a href="#" data-region="littoral">Littoral</a></li>
+        <li><a href="#" data-region="nord">Nord</a></li>
+        <li><a href="#" data-region="nordouest">Nord-Ouest</a></li>
+        <li><a href="#" data-region="ouest">Ouest</a></li>
+        <li><a href="#" data-region="sud">Sud</a></li>
+        <li><a href="#" data-region="sudouest">Sud-Ouest</a></li>
+    </ul>
+</header>
+
+<div class="menu">
+    <button onclick="show('adamaoua')">Adamaoua</button>
+    <button onclick="show('centre')">Centre</button>
+    <button onclick="show('est')">Est</button>
+    <button onclick="show('extremenord')">Extrême-Nord</button>
+    <button onclick="show('littoral')">Littoral</button>
+    <button onclick="show('nord')">Nord</button>
+    <button onclick="show('nordouest')">Nord-Ouest</button>
+    <button onclick="show('ouest')">Ouest</button>
+    <button onclick="show('sud')">Sud</button>
+    <button onclick="show('sudouest')">Sud-Ouest</button>
+</div>
+
+
+<div class="presentation" id="home">
+    <h2>Bienvenue au Cameroun 🌍</h2>
+    <p>
+        Découvrez les richesses culturelles du Cameroun : ses régions,
+        ses tribus, ses plats traditionnels, ses vêtements et ses traditions.
+    </p>
+</div>
+
+<div class="box" id="box">
+
+    <h2 id="title"></h2>
+
+   <div class="t">
+    <button onclick="prevImage()">⬅</button>
+    <img id="img">
+    <button onclick="nextImage()">➡</button>
+</div>
+
+    <div class="info">
+        <p id="desc"></p>
+        <p><b>🍛 Plats :</b> <span id="food"></span></p>
+        <p><b>👕 Vêtements :</b> <span id="cloth"></span></p>
+        <p><b>💃 Traditions :</b> <span id="trad"></span></p>
+        <p><b>🌤️ Climat :</b> <span id="climate"></span></p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - Cameroun Culture & Traditions
+</footer>
+
+<script>
+let currentRegion = "";
+let currentImage = 0;
+const regions = {
+
+adamaoua: {
+    nom: "Adamaoua",
+    desc: "Région montagneuse et d’élevage.",
+    food: "Mil, lait, viande",
+    cloth: "Boubous traditionnels",
+    trad: "Élevage peul",
+    climate: "Climat doux et montagneux",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+centre: {
+    nom: "Centre",
+    desc: "Région de Yaoundé, capitale politique.",
+    food: "Okok, bâton de manioc",
+    cloth: "Pagne Beti",
+    trad: "Rites et danses",
+    climate: "Climat humide",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+est: {
+    nom: "Est",
+    desc: "Grande région forestière.",
+    food: "Mbongo, manioc",
+    cloth: "Pagnes forestiers",
+    trad: "Chasse traditionnelle",
+    climate: "Très humide",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+extremenord: {
+    nom: "Extrême-Nord",
+    desc: "Zone sahélienne très chaude.",
+    food: "Mil, sorgho",
+    cloth: "Boubous légers",
+    trad: "Fêtes peules",
+    climate: "Très chaud et sec",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+littoral: {
+    nom: "Littoral",
+    desc: "Douala, centre économique.",
+    food: "Ndolé, poisson braisé",
+    cloth: "Pagnes sawa",
+    trad: "Ngondo",
+    climate: "Humide et chaud",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+nord: {
+    nom: "Nord",
+    desc: "Zone sahélienne.",
+    food: "Couscous de mil",
+    cloth: "Grand boubou",
+    trad: "Élevage et fêtes",
+    climate: "Chaud et sec",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+nordouest: {
+    nom: "Nord-Ouest",
+    desc: "Région montagneuse culturelle.",
+    food: "Fufu, eru",
+    cloth: "Tenues traditionnelles",
+    trad: "Chefferies",
+    climate: "Frais",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+ouest: {
+    nom: "Ouest",
+    desc: "Terre des Bamiléké et Bamoun.",
+    food: "Taro sauce jaune",
+    cloth: "Boubous royaux",
+    trad: "Chefferies et festivals",
+    climate: "Climat frais",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+sud: {
+    nom: "Sud",
+    desc: "Région forestière riche.",
+    food: "Mbongo tchobi",
+    cloth: "Pagnes traditionnels",
+    trad: "Rites forestiers",
+    climate: "Humide",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+},
+
+sudouest: {
+    nom: "Sud-Ouest",
+    desc: "Côte et forêt tropicale.",
+    food: "Poisson, eru",
+    cloth: "Pagnes côtiers",
+    trad: "Danses maritimes",
+    climate: "Humide et chaud",
+    images: ["https://i.imgur.com/3mKx8o4.jpg"]
+}
+
+};
+
+function show(region){
+
+    currentRegion = region;
+    currentImage = 0;
+    const data = regions[region];
+
+    document.getElementById("home").style.display="none";
+    document.getElementById("box").style.display="block";
+    document.getElementById("title").innerText = data.nom;
+    document.getElementById("desc").innerText = data.desc;
+    document.getElementById("food").innerText = data.food;
+    document.getElementById("cloth").innerText = data.cloth;
+    document.getElementById("trad").innerText = data.trad;
+    document.getElementById("climate").innerText = data.climate;
+    document.getElementById("img").src = data.images[currentImage];
+}
+function nextImage(){
+    const data = regions[currentRegion];
+
+    currentImage++;
+
+    if(currentImage >= data.images.length){
+        currentImage = 0;
+    }
+
+    document.getElementById("img").src = data.images[currentImage];
+}
+
+function prevImage(){
+    const data = regions[currentRegion];
+
+    currentImage--;
+
+    if(currentImage < 0){
+        currentImage = data.images.length - 1;
+    }
+
+    document.getElementById("img").src = data.images[currentImage];
+}
+
+</script>
+
+</body>
+</html>
