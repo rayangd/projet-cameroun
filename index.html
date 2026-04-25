@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cameroun en grand</title>
+    <link rel="stylesheet" href="projet.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+<header>
+    <div class="sans">paix-travail-patrie</div>
+
+    <nav>
+         <div class="logo-titre">
+        <img src="OIP.webp" alt="Drapeau du Cameroun" class="drapeau">
+        <h1 class="titre">Bienvenue au Cameroun</h1> 
+       
+    </div>
+
+           <ul>
+            <li><a href="">paysage</a></li>
+              <li><a href="">culturelle</a></li>
+            <li><a href="">histoire</a></li>
+        </ul>
+    </nav>
+
+    <div class="connecter">
+        <a href="#" class="connecter">Se connecter</a>
+        <a href="#">S'inscrire</a>
+    </div>
+   <img src="OIP.webp" id="menuIcon" class="menu-icon" alt="Menu">
+
+    <ul class="menu-regions" id="menuRegions">
+        <li><a href="#" data-region="adamaoua">Adamaoua</a></li>
+        <li><a href="#" data-region="centre">Centre</a></li>
+        <li><a href="#" data-region="est">Est</a></li>
+        <li><a href="#" data-region="extremenord">Extrême-Nord</a></li>
+        <li><a href="#" data-region="littoral">Littoral</a></li>
+        <li><a href="#" data-region="nord">Nord</a></li>
+        <li><a href="#" data-region="nordouest">Nord-Ouest</a></li>
+        <li><a href="#" data-region="ouest">Ouest</a></li>
+        <li><a href="#" data-region="sud">Sud</a></li>
+        <li><a href="#" data-region="sudouest">Sud-Ouest</a></li>
+    </ul>
+</header>
+<form action="page1.html" method="get">
+<div id="formulaire" class="entree">
+    <div class="test">
+        <span class="sortie"></span>
+        <h2>Connexion</h2>
+        <input type="text" placeholder="Nom" id="nom" required>
+        <input type="text" placeholder="prenom" id="prenom" required>
+        <input type="email" placeholder="entre votr email" id="email">
+        <input type="password" placeholder="Mot de passe" id="password">
+    
+        <input type="submit" value="envoyer" onclick="envoyer()">
+    </div>
+</div>
+</form>
+
+<main>
+    <h1>Le Cameroun en grand</h1>
+<div class="droite">
+  <div class="box"> <h4>histoire</h4> <p>indépendance et État moderne
+Le Cameroun accède à l’indépendance en 1960 pour la partie française et en 1961 pour la partie britannique, suivie par la réunification. Depuis, le pays a connu la construction d’un État centralisé, des tensions politiques et des défis liés à la diversité culturelle et linguistique. 
+cyriljarnias.com</p></div>
+  <div class="boxi"> <h4>tribu du cameroun</h4>
+ <p>Le Cameroun est un pays riche en diversité ethnique, avec plus de 278 ethnies différentes. Ces tribus se répartissent en six apparentements ethniques selon l'Office de la recherche scientifique et technique outre-mer. Parmi les groupes ethniques, on trouve les Sawa ou Côtier, les Vouté non musulmans, les locuteurs de langues Méka, Koh et Kakó, et les peuples autochtones forestiers, souvent appelés « Pygmées ». Les Tikar et les locuteurs bantuphones du Mbam, </p></div>
+  <div class="boxu"><h4>Le Cameroun politico-institutionnel</h4><p>
+Le Cameroun est un pays avec une république unitaire décentralisée et un système multipartite. Le pouvoir exécutif est exercé par le président et le gouvernement, tandis que le pouvoir législatif appartient au Senat et à l'Assemblée nationale. Le Cameroun a adopté l'anglais et le français comme langues officielles, garantissant la promotion du bilinguisme sur tout le territoire. La république du Cameroun est une république parlementaire dualiste et rationalisée.</p></div>
+   <div class="boxu"><h4>decouverte du cameroun</h4><p>La découverte du Cameroun remonte à l'ère préhistorique, avec des populations proches des Baka et des Akas, traditionnellement appelés pygmées, qui habitent toujours les forêts des régions du sud et de l'est. Les premiers habitants du Cameroun furent probablement des populations proches des Baka et des Akas, traditionnellement appelés pygmées. Ils habitent toujours les forêts des régions du sud et de l'est.</p></div>
+   <div class="boxi"><h4>economie du cameroun</h4><p>Le Rapport sur la situation économique du Cameroun 2025, intitulé « L'or vert du Cameroun : valoriser les forêts et le capital naturel », fournit une analyse complète des évolutions économiques récentes du pays. Le rapport souligne l'importance des forêts durables et la gestion des ressources naturelles en tant que moteurs d'un développement inclusif et résilient. Le PIB du Cameroun a augmenté de 3,5 % en 2024, grâce à la hausse des prix du cacao .</p></div>
+    <div class="box"><h4>paysage du cameroun</h4> <p>Le Cameroun, surnommé « l’Afrique en miniature », offre une variété impressionnante d’écosystèmes et de paysages. Les forêts tropicales du Mont Cameroun, les savanes du parc national de Waza, et les forêts denses de la réserve du Dja sont des exemples de la biodiversité exceptionnelle du pays. Les montagnes du Cameroun, comme les monts Mandara, et les chutes d’Ekom-Nkam, ainsi que les plaines côtières, contribuent à la richesse des paysages du Cameroun.</p></div>
+</div>
+
+
+
+    
+</main>
+<footer> <h5>paix-travail-patrie </h5></footer>
+<script> 
+function envoyer(){
+let a=document.getElementById("nom").value
+let b=document.getElementById("prenom").value
+let c=document.getElementById("email").value
+let d=document.getElementById("password").value
+if(a== ""|| b==""|| c==""|| d==""){
+    alert ("entre vos information");
+}
+}
+const icon = document.getElementById("menuIcon");
+const menu = document.getElementById("menuRegions");
+const contenu = document.getElementById("contenu-region");
+
+icon.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+});
+
+const regions = {
+    adamaoua: { nom: "Adamaoua", texte: "Région montagneuse...", image: "https://i.imgur.com/gDlWm6x.jpg" },
+    centre: { nom: "Centre", texte: "Yaoundé capitale...", image: "https://i.imgur.com/3JfS5Mp.jpg" },
+    est: { nom: "Est", texte: "Très forestière...", image: "https://i.imgur.com/tO8Gd4h.jpg" },
+    extremenord: { nom: "Extrême-Nord", texte: "Parc de Waza...", image: "https://i.imgur.com/MztjTyz.jpg" },
+    littoral: { nom: "Littoral", texte: "Douala capitale éco...", image: "https://i.imgur.com/3mKx8o4.jpg" },
+    nord: { nom: "Nord", texte: "Plaines agricoles...", image: "https://i.imgur.com/N1fF0OO.jpg" },
+    nordouest: { nom: "Nord-Ouest", texte: "Relief volcanique...", image: "https://i.imgur.com/sStR0d9.jpg" },
+    ouest: { nom: "Ouest", texte: "Bamiléké, montagnes...", image: "https://i.imgur.com/efiv3a9.jpg" },
+    sud: { nom: "Sud", texte: "Région forestière...", image: "https://i.imgur.com/WWmPO07.jpg" },
+    sudouest: { nom: "Sud-Ouest", texte: "Mont Cameroun...", image: "https://i.imgur.com/3bMJRpo.jpg" }
+};
+
+document.querySelectorAll(".menu-regions a").forEach(lien => {
+    lien.addEventListener("click", () => {
+        const r = lien.dataset.region;
+        const info = regions[r];
+
+        contenu.innerHTML = `
+            <h2>${info.nom}</h2>
+            <p>${info.texte}</p>
+            <img src="${info.image}">
+        `;
+
+        menu.style.display = "none";
+    });
+});
+const btn = document.querySelector("header .connecter a");
+const popup = document.getElementById("formulaire");
+const close = document.querySelector(".close");
+
+btn.addEventListener("click", function(e){
+    e.preventDefault();
+    popup.style.display = "flex";
+});
+
+
+close.onclick = function() {
+    popup.style.display = "none";
+};
+
+
+window.onclick = function(e) {
+    if (e.target == popup) {
+        popup.style.display = "none";
+    }
+};
+
+</script>
+
+</body>
+</html>
