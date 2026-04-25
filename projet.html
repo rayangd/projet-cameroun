@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cameroun en grand</title>
     <link rel="stylesheet" href="projet.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
 
 <header>
     <div class="sans">paix-travail-patrie</div>
-  
 
     <nav>
          <div class="logo-titre">
@@ -31,7 +31,6 @@
         <a href="#" class="connecter">Se connecter</a>
         <a href="#">S'inscrire</a>
     </div>
- 
    <img src="OIP.webp" id="menuIcon" class="menu-icon" alt="Menu">
 
     <ul class="menu-regions" id="menuRegions">
@@ -47,7 +46,7 @@
         <li><a href="#" data-region="sudouest">Sud-Ouest</a></li>
     </ul>
 </header>
-<form action="page1.html">
+<form action="page1.html" method="get">
 <div id="formulaire" class="entree">
     <div class="test">
         <span class="sortie"></span>
@@ -131,7 +130,7 @@ const btn = document.querySelector("header .connecter a");
 const popup = document.getElementById("formulaire");
 const close = document.querySelector(".close");
 
-btn.addEventListener("click", function(e) {
+btn.addEventListener("click", function(e){
     e.preventDefault();
     popup.style.display = "flex";
 });

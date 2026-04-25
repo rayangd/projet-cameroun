@@ -1,0 +1,152 @@
+
+@media screen and (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.droite {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+}
+
+.images {
+        display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+    .connecter {
+        display: flex;
+        gap: 10px;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+
+header {
+        padding: 10px;
+        text-align: center;
+}
+
+.logo-titre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.titre {
+        font-size: 24px;
+}
+
+nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+}
+
+    nav ul li {
+        list-style: none;
+}
+
+.connecter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+}
+
+.menu-icon {
+        width: 40px;
+        display: block;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+
+.menu-regions {
+        width: 100%;
+        text-align: center;
+    }
+
+.droite {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+}
+
+.box,
+.boxi,
+.boxu {
+        width: 100%;
+    }
+
+.images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+.t img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+}
+
+form {
+        width: 100%;
+        padding: 10px;
+}
+
+    .entree,
+    .test {
+        width: 100%;
+}
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+}
+
+    footer {
+        text-align: center;
+        padding: 15px;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+
+ h1 {
+    font-size: 22px;
+}
+}
+
+h2 {
+        font-size: 20px;
+}
+
+ p {
+        font-size: 14px;
+}
+
+.titre {
+        font-size: 20px;
+}
+
+ .drapeau {
+        width: 60px;
+}
+
+    .menu-icon {
+        width: 35px;
+}
+
+    .contact-info {
+        font-size: 14px;
+}

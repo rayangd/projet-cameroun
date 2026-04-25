@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html >
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cameroun - Histoire Interactive Pro</title>
 <link rel="stylesheet" href="page3.css">
+<link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -18,11 +19,11 @@
 </header>
 
 <div class="hero">
-<h1>Cameroun</h1>
-<p>Afrique en miniature - Histoire, culture et légendes</p>
+    <img src="téléchargement.png" alt="Image du Cameroun" class="hero-img">
+    <h1 class="hero-text">Cameroun, Afrique en miniature</h1>
 </div>
 
-<!-- INTRO -->
+
 <section id="intro">
 <div class="card">
 <h2>Introduction</h2>
@@ -36,7 +37,7 @@
 </div>
 </section>
 
-<!-- HISTORY -->
+
 <section id="history">
 
 <div class="card">
@@ -70,7 +71,7 @@ Présidence de la République du Cameroun
 Le Cameroun se distingue par sa diversité géographique, culturelle et linguistique, ce qui en fait un pays unique sur le continent africain, souvent qualifié de « miniature Afrique » en raison de la variété de ses paysages et de ses peuples. </p>
 </section>
 
-<!-- REGIONS -->
+
 <section id="regions">
 <div class="card">
 <h2>🗺️ Les 10 Régions du Cameroun</h2>
@@ -135,7 +136,7 @@ e.target.classList.add("show");
 
 cards.forEach(c=>observer.observe(c));
 
-// QUIZ
+
 function check(){
 let a=document.getElementById("q1").value;
 let b=document.getElementById("q2").value;
